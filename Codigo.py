@@ -17,7 +17,7 @@ Visita técnica em {cidade} para manutenção em equipamento Dimep.
 R$ {str(f'{valor_km:.2f}'.replace('.', ','))}
 
 Serviço de manutenção em equipamento Dimep.
-R$ {str(f'{servico:.2f}'.replace('.', ','))}
+R$ {str(f'{servico:.2f}'.replace('.', ','))} (Valor por equipamento / não incluso peças)
 
 Pagamento
 = 28 DDF'''
@@ -29,7 +29,7 @@ Pagamento
 janela = tk.Tk()
 janela.title('ORÇAMENTO PARA VISITAS TÉCNICAS')
 janela.configure(bg='#32CD32')
-janela.geometry("470x450")
+janela.geometry("600x500")
 
 cidade = tk.Label(text="CIDADE ", font='bold', fg='green', borderwidth=1, relief='solid', anchor='w')
 cidade.grid(row=0, column=0, padx=15, pady=15, sticky='nswe', columnspan=2)
@@ -52,7 +52,7 @@ informarvalorServico.grid(row=2, column=2, padx=15, pady=15, sticky='nsew', colu
 botao_calcular = tk.Button(text="CALCULAR", font='bold', fg='green', borderwidth=1, relief='solid', command=calcular)
 botao_calcular.grid(row=3, column=0, padx=15, pady=15, sticky='nsew')
 
-valor_visita = tk.Label(width=60, height=10, borderwidth=1, relief='solid', anchor='w', justify='left')
+valor_visita = valor_visita = tk.Label(width=80, height=10, borderwidth=1, relief='solid', anchor='w', justify='left')
 valor_visita.grid(row=4, column=0, columnspan=7, padx=15, pady=15, sticky='nsew')
 
 botao_fechar = tk.Button(text='Fechar', borderwidth=1, relief='solid', command=janela.quit)
